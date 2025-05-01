@@ -95,6 +95,8 @@ export default function RandomQuoteMachine() {
     ? { transition: "all 1s ease" }
     : { transition: "none" };
 
+  
+
   const getRandomQuote = () => {
     if (quotes.length > 0) {
       const randomIndex = Math.floor(Math.random() * quotes.length);
@@ -126,11 +128,7 @@ export default function RandomQuoteMachine() {
       {randomQuote && (
         <div
           id="background"
-          style={{
-            backgroundColor: randomColor,
-            ...transitionStyle,
-            width: "100%",
-          }}
+          style={{ backgroundColor: randomColor, ...transitionStyle, width: "100%" }}
         >
           <div
             id="quote-box"
