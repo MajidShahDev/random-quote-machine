@@ -86,7 +86,7 @@ export default function RandomQuoteMachine() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setTransitionEnabled(true);
-    }, 30); // small delay to skip first paint
+    }, 100); // small delay to skip first paint
 
     return () => clearTimeout(timer);
   }, []);
