@@ -1,0 +1,205 @@
+
+@font-face {
+  font-family: "Playwrite AU SA";
+  src: url('../assets/fonts/PlaywriteAUSA-Regular.ttf') format("truetype");
+  /* src: url("../assets/fonts/PlaywriteAUSA-Thin.ttf") format("truetype"); */
+  /* src: url("../assets/fonts/PlaywriteAUSA-VariableFont_wght.ttf") format("truetype"); */
+}
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#background {
+  font-family: "Playwrite AU SA", cursive;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 96%);
+  margin: 0;
+  letter-spacing: 0.03rem;
+  line-height: 1.9rem;
+}
+
+/* The quote box container */
+#quote-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+  padding: 2.5rem;
+  width: 500px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  top: -3rem;
+  margin: 1.5rem;
+}
+
+/* Styling for the quote text */
+#text {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 1.7rem;
+  line-height: 2.3rem;
+  margin-bottom: 1rem;
+  color: hsl(0, 0%, 20%);
+}
+
+/* Styling for the author text */
+#author {
+  display: flex;
+  justify-content: right;
+  font-size: 1rem;
+  padding-right: 1rem;
+  color: hsl(0, 0%, 33%);
+  width: 100%;
+}
+
+#twitter-new-quote {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  align-items: center;
+  flex-direction: row;
+  margin: 1.3rem 0;
+  width: 90%;
+}
+
+/* Styling for the Tweet link */
+#tweet-quote {
+  color: hsl(0, 100%, 100%);
+  background-color: hsl(203, 89%, 53%);
+  padding: 3.5px 20px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+#tweet-quote:hover {
+  background-color: hsl(199, 100%, 35%);
+}
+
+/* Button styling */
+#new-quote {
+  font-family: "Playwrite AU SA", cursive;
+  background-color: hsl(203, 89%, 53%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  padding: 6px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+  outline: none;
+}
+
+#new-quote:hover {
+  background-color: hsl(199, 100%, 35%);
+}
+
+
+#container-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 70%, 50%);
+  height: 100vh;
+}
+#container-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(120, 50%, 50%);
+  height: 100vh;
+}
+#container-empty-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 25%);
+  height: 100vh;
+}
+#loading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  font-family: "Playwrite AU SA", cursive;
+  color: hsl(0, 100%, 100%);
+}
+#error {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  font-family: "Playwrite AU SA", cursive;
+  color: hsl(0, 100%, 100%);
+}
+#empty-data {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  font-family: "Playwrite AU SA", cursive;
+  color: hsl(0, 100%, 100%);
+}
+
+#quote-start svg{
+  transform: rotate(3deg);
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #quote-box {
+    width: 400px;
+    padding: 1.3rem;
+  }
+
+  #text {
+    font-size: 1.1rem; /* Adjust font size for smaller screens */
+    line-height: 1.8rem;
+  }
+
+  #author {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    text-align: right;
+  }
+
+  #new-quote {
+    font-size: 0.9rem; /* Slightly smaller button text */
+  }
+  #tweet-quote {
+    font-size: 0.9rem; /* Slightly smaller button text */
+  }
+  #quote-start {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #quote-box {
+    padding: 1rem;
+    min-width: 250px;
+  }
+
+  #text {
+    font-size: 1rem; /* Adjust font size for mobile screens */
+  }
+
+  #author {
+    font-size: 0.8rem; /* Adjust font size for mobile screens */
+  }
+
+  #new-quote {
+    padding: 4.3px 15px; /* Smaller button padding for mobile */
+    font-size: 0.8rem; /* Smaller button text on mobile */
+  }
+}
+
+
